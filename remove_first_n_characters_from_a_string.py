@@ -1,11 +1,15 @@
 # Remove first n characters from a string
 
-def remove_chars():
+def get_input():
     string = input("String Entry: ")
     n = int(input("Enter a Number: "))
+    return string, n
+
+def remove_chars(string, n):
     if n < len(string):
         return string[n:]
     else:
-        return "Error: n is greater than the length of the string"
-
-print(remove_chars())  # User inputs the string and n
+        return "Error: Entered number is greater than the length of the string entered."
+    
+string, n = get_input()
+print(remove_chars(string, n))
